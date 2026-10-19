@@ -1,0 +1,183 @@
+@import url('https://googleapis.com');
+
+/* Pengaturan Dasar Modern */
+body {
+    background: #fcfdfd;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #333a42;
+    -webkit-font-smoothing: antialiased;
+}
+
+hr {
+    border: 0;
+    background: #e2e8f0;
+    height: 2px;
+    margin: 20px auto;
+    width: 100px;
+    border-radius: 2px;
+}
+
+/* Bagian Header Atas */
+header {
+    text-align: center;
+    padding: 30px 0 10px;
+}
+
+header .judul {
+    font-size: 20pt;
+    font-weight: 800;
+    color: #1e293b;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Wrapper Utama */
+.wrap {
+    width: 1200px;
+    margin: 0 auto 50px;
+}
+
+/* Menu Navigasi Ggaya Baru */
+nav.menu ul {
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin: 20px 0;
+    background: #0850eb;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+nav.menu ul li {
+    margin: 0;
+    float: left;
+}
+
+nav.menu ul a {
+    padding: 20px 30px;
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+}
+
+nav.menu ul a:hover {
+    text-decoration: none;
+    background: #35d7fb;
+    transform: translateY(-1px);
+}
+
+/* Pembagian Grid Konten & Sidebar */
+.blog {
+    float: left;
+    width: 880px; /* Diperbarui agar sejajar presisi */
+}
+
+.sidebar {
+    float: right;
+    width: 290px;
+}
+
+/* Kotak Konten Utama */
+.conteudo {
+    padding: 35px;
+    margin: 0 0 25px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.02), 0 4px 6px -2px rgba(0, 0, 0, 0.01);
+}
+
+.conteudo h1 {
+    padding: 0;
+    margin: 0 0 20px;
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 24px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.conteudo p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #64748b;
+}
+
+.conteudo strong {
+    color: #1e293b;
+    background: #fef3c7;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Kotak Sidebar (Widget Admin) */
+.sidebar .widget {
+    padding: 30px;
+    margin: 0 0 25px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.02), 0 4px 6px -2px rgba(0, 0, 0, 0.01);
+    font-size: 14px;
+}
+
+.sidebar .widget h2 {
+    padding: 0;
+    margin: 0 0 12px;
+    color: #2563eb; /* Biru royal yang lebih profesional */
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sidebar .widget p {
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Pembersihan Float (Clearfix) */
+.wrap::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Responsif Layar Gadget / Mobile */
+@media screen and (max-width: 1250px) {
+    .wrap {
+        width: 92%;
+        padding: 0 15px;
+    }
+
+    .blog, .sidebar {
+        width: 100%;
+        float: none;
+    }
+
+    .sidebar {
+        margin-top: 20px;
+    }
+
+    nav.menu ul {
+        border-radius: 8px;
+    }
+
+    nav.menu ul li {
+        float: none;
+        width: 100%;
+    }
+
+    nav.menu ul a {
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+}
